@@ -32,7 +32,7 @@
 ## 2. 测试结果
 
 - 自动化：**80 passed**；
-- 覆盖率：**84%**（`pytest --cov-fail-under=80`）；
+- 覆盖率：**83%**（`pytest --cov-fail-under=80`）；
 - Python 3.11 / 3.12 均通过；
 - Docker 镜像构建、容器冒烟、Compose + Caddy HTTPS 冒烟由 CI 执行。
 

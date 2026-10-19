@@ -197,6 +197,7 @@ def test_admin_can_delete_task_and_executor_cannot(tmp_path: Path) -> None:
         assert client.delete(f"/v1/tasks/{task_id}", headers=headers()).status_code == 403
         assert client.delete(f"/v1/tasks/{task_id}", headers=headers("admin-secret-key")).status_code == 204
         assert client.get(f"/v1/tasks/{task_id}", headers=headers("admin-secret-key")).status_code == 404
+        assert client.delete("/v1/tasks/T7-missing", headers=headers("admin-secret-key")).status_code == 404
 
 
 def test_authorization_header_is_not_logged(tmp_path: Path, capsys) -> None:

@@ -164,7 +164,10 @@ class TaskService:
     def delete_task(self, user: User, task_id: str) -> None:
         if not user.is_admin:
             raise ServiceError(403, "FORBIDDEN")
-        task = self.repository.get_task(task_id)
+        try:
+            task = self.repository.get_task(task_id)
+        except TaskNotFound as exc:
+            raise NotFoundError() from exc
         self.repository.delete_task(task["id"])
         logger.info("task deleted", extra={"task_id": task_id, "user": user.user})
 

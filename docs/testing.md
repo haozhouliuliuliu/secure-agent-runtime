@@ -12,7 +12,7 @@ pytest --cov=team_agent --cov-report=term   # 门槛 80%
 最近结果：
 
 - **80 passed**；
-- 覆盖率 **84%**；
+- 覆盖率 **83%**；
 - Python 3.11 / 3.12（CI）；
 - ruff check / format 通过。
 

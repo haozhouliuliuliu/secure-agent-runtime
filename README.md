@@ -164,7 +164,7 @@ pytest --cov=team_agent --cov-report=term   # 覆盖率门槛 80%
 
 详细结果与"没有证明什么"见 [docs/testing.md](docs/testing.md)。
 
-- 80 个自动化测试，覆盖率 84%；覆盖权限、认证、隔离、脱敏、并发预算、恢复、备份、Docker/HTTPS 部署；
+- 80 个自动化测试，覆盖率 83%；覆盖权限、认证、隔离、脱敏、并发预算、恢复、备份、Docker/HTTPS 部署；
 - 安全测试清单与逐项证据见 [docs/security-checklist.md](docs/security-checklist.md)；
 - 威胁模型见 [docs/threat-model.md](docs/threat-model.md)。
 
