@@ -7,15 +7,22 @@
 [![Python](https://img.shields.io/badge/python-3.12-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-## 与项目⑤的关系
+## 业务场景
 
-- 上游：https://github.com/haozhouliuliuliu/it-agent-collab
-- 基线：`v1.0.0`，提交 `fb17bfc`
+把 AI Agent 接进企业内部系统时，真正的难点不是“能不能回答”，而是：它能碰哪些数据、以谁的身份操作、失败时会不会越权、出了事能不能追溯、能不能安全地部署在内网。
+
+这个项目以只读的多 Agent 联合研判为业务场景，补齐 API 身份、工具授权、预算/限流、日志脱敏、非 root 镜像、HTTPS 入口、备份恢复等边界。它适合作为 Agent 上线前的安全设计参考，也适合演示“权限收紧后功能仍然可用”。
+
+## 项目背景
+
+- 上游基线：https://github.com/haozhouliuliuliu/it-agent-collab（`v1.0.0` / `fb17bfc`）
 - 本仓库独立，不修改上游；保留 MIT 许可证与来源说明（见 [UPSTREAM.md](UPSTREAM.md)）
+
+早期多 Agent 原型解决了“怎么协作”，但离“能安全上线”还有距离：工具权限、身份、并发、日志、部署边界都不完整。本项目把这些控制补齐，适合作为企业内部 Agent 服务的上线前基线。
 
 ## 核心安全改动
 
-| 项目⑤的问题 | 项目⑦的控制 |
+| 原型中的风险 | 本项目的控制 |
 |---|---|
 | Business/Policy 都拿到全部工具 | **两层强制**：模型工具列表按角色过滤 + 执行前授权校验 |
 | 无 API、无身份 | Bearer API key，executor/admin 角色，任务 owner 隔离 |
@@ -175,6 +182,14 @@ pytest --cov=team_agent --cov-report=term   # 覆盖率门槛 80%
 - 模型输出仍是概率性的，审核只能降低而非消除错误；
 - 本地 HTTPS 使用内部 CA，不是生产证书方案；
 - 本项目是安全加固演示，不等于通过任何企业合规认证。
+
+## 适用场景与可复用产出
+
+- **Agent 上线评估**：把“模型能做什么”与“系统允许它做什么”分开；
+- **两层工具授权**：模型工具列表过滤 + 执行前强制校验，提示词不能越权；
+- **服务化边界**：Bearer 身份、任务 owner 隔离、全局/单任务预算、限流、过载拒绝；
+- **可运维**：JSON 日志脱敏、健康检查、SQLite 备份/恢复、Docker 非 root、Caddy HTTPS；
+- **可复用材料**：权限矩阵、威胁模型、安全测试清单、Compose 部署示例。
 
 ## 文档
 
