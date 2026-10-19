@@ -1,0 +1,51 @@
+name: secure-agent-runtime
+
+services:
+  agent:
+    build: .
+    image: secure-agent-runtime:1.0.0
+    environment:
+      COLLAB_DB_PATH: /app/data/collab.db
+      COLLAB_SEED_DIR: /app/seed_data
+      SERVICE_HOST: 0.0.0.0
+      SERVICE_PORT: "8000"
+      SERVICE_MAX_CONCURRENT_TASKS: "4"
+      SERVICE_MAX_REQUESTS_PER_MINUTE: "30"
+      SERVICE_MAX_INPUT_CHARS: "2000"
+      SERVICE_API_KEYS: ${SERVICE_API_KEYS:?SERVICE_API_KEYS is required}
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY:?DEEPSEEK_API_KEY is required}
+      QWEN_API_KEY: ${QWEN_API_KEY:?QWEN_API_KEY is required}
+      KIMI_API_KEY: ${KIMI_API_KEY:?KIMI_API_KEY is required}
+      COLLAB_MAX_TOTAL_CALLS: ${COLLAB_MAX_TOTAL_CALLS:-50}
+      COLLAB_MAX_CALLS_PER_TASK: ${COLLAB_MAX_CALLS_PER_TASK:-12}
+    volumes:
+      - agent-data:/app/data
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health/live')"
+      interval: 15s
+      timeout: 3s
+      start_period: 10s
+      retries: 3
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:2.8-alpine
+    depends_on:
+      agent:
+        condition: service_healthy
+    ports:
+      - "8443:443"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    restart: unless-stopped
+
+volumes:
+  agent-data:
+  caddy-data:
+  caddy-config:

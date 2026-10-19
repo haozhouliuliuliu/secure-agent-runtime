@@ -1,0 +1,19 @@
+{
+	auto_https disable_redirects
+}
+
+https://localhost {
+	tls internal
+	reverse_proxy agent:8000
+
+	header {
+		X-Content-Type-Options nosniff
+		X-Frame-Options DENY
+		Referrer-Policy no-referrer
+	}
+
+	log {
+		output stdout
+		format json
+	}
+}

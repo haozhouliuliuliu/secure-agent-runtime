@@ -1,0 +1,35 @@
+[
+  {"asset_id": "ASSET-1001", "category": "笔记本电脑", "model": "ThinkPad T14 Gen5", "status": "in_use", "assignee_id": "EMP-1001", "location": "上海-工位A12", "purchased_at": "2026-01-15", "note": ""},
+  {"asset_id": "ASSET-1002", "category": "笔记本电脑", "model": "ThinkPad T14 Gen5", "status": "in_stock", "assignee_id": null, "location": "上海-IT仓库", "purchased_at": "2026-01-15", "note": ""},
+  {"asset_id": "ASSET-1003", "category": "笔记本电脑", "model": "ThinkPad T14 Gen5", "status": "in_stock", "assignee_id": null, "location": "上海-IT仓库", "purchased_at": "2026-01-15", "note": ""},
+  {"asset_id": "ASSET-1004", "category": "笔记本电脑", "model": "ThinkPad X1 Carbon", "status": "in_use", "assignee_id": "EMP-1002", "location": "上海-工位A08", "purchased_at": "2025-11-20", "note": ""},
+  {"asset_id": "ASSET-1005", "category": "笔记本电脑", "model": "ThinkPad X1 Carbon", "status": "in_stock", "assignee_id": null, "location": "上海-IT仓库", "purchased_at": "2025-11-20", "note": ""},
+  {"asset_id": "ASSET-1006", "category": "笔记本电脑", "model": "MacBook Air 13", "status": "in_use", "assignee_id": "EMP-1003", "location": "上海-工位B03", "purchased_at": "2026-02-10", "note": ""},
+  {"asset_id": "ASSET-1007", "category": "笔记本电脑", "model": "MacBook Air 13", "status": "in_stock", "assignee_id": null, "location": "上海-IT仓库", "purchased_at": "2026-02-10", "note": ""},
+  {"asset_id": "ASSET-1008", "category": "笔记本电脑", "model": "ThinkPad T14 Gen5", "status": "repair", "assignee_id": null, "location": "上海-维修中", "purchased_at": "2026-01-15", "note": "键盘进水，返厂维修"},
+  {"asset_id": "ASSET-1009", "category": "笔记本电脑", "model": "ThinkPad L14", "status": "in_use", "assignee_id": "EMP-1004", "location": "上海-工位C02", "purchased_at": "2025-08-01", "note": ""},
+  {"asset_id": "ASSET-1010", "category": "笔记本电脑", "model": "ThinkPad L14", "status": "in_use", "assignee_id": "EMP-1005", "location": "上海-工位C05", "purchased_at": "2025-08-01", "note": ""},
+
+  {"asset_id": "ASSET-2001", "category": "显示器", "model": "Dell U2723QE", "status": "in_use", "assignee_id": "EMP-1001", "location": "上海-工位A12", "purchased_at": "2026-01-15", "note": ""},
+  {"asset_id": "ASSET-2002", "category": "显示器", "model": "Dell U2723QE", "status": "in_stock", "assignee_id": null, "location": "上海-IT仓库", "purchased_at": "2026-01-15", "note": ""},
+  {"asset_id": "ASSET-2003", "category": "显示器", "model": "Dell U2723QE", "status": "in_stock", "assignee_id": null, "location": "上海-IT仓库", "purchased_at": "2026-01-15", "note": ""},
+  {"asset_id": "ASSET-2004", "category": "显示器", "model": "Dell U2422H", "status": "in_use", "assignee_id": "EMP-1002", "location": "上海-工位A08", "purchased_at": "2025-11-20", "note": ""},
+  {"asset_id": "ASSET-2005", "category": "显示器", "model": "Dell U2422H", "status": "in_use", "assignee_id": "EMP-1003", "location": "上海-工位B03", "purchased_at": "2026-02-10", "note": ""},
+  {"asset_id": "ASSET-2006", "category": "显示器", "model": "Dell U2422H", "status": "in_stock", "assignee_id": null, "location": "上海-IT仓库", "purchased_at": "2025-06-01", "note": ""},
+  {"asset_id": "ASSET-2007", "category": "显示器", "model": "Dell U2422H", "status": "retired", "assignee_id": null, "location": "上海-报废仓", "purchased_at": "2023-03-10", "note": "屏幕老化，已报废"},
+  {"asset_id": "ASSET-2008", "category": "显示器", "model": "Dell U2723QE", "status": "in_use", "assignee_id": "EMP-1006", "location": "上海-工位D01", "purchased_at": "2026-03-05", "note": ""},
+
+  {"asset_id": "ASSET-3001", "category": "扩展坞", "model": "Lenovo Dock Gen2", "status": "in_use", "assignee_id": "EMP-1001", "location": "上海-工位A12", "purchased_at": "2026-01-15", "note": ""},
+  {"asset_id": "ASSET-3002", "category": "扩展坞", "model": "Lenovo Dock Gen2", "status": "in_stock", "assignee_id": null, "location": "上海-IT仓库", "purchased_at": "2026-01-15", "note": ""},
+  {"asset_id": "ASSET-3003", "category": "扩展坞", "model": "Lenovo Dock Gen2", "status": "in_stock", "assignee_id": null, "location": "上海-IT仓库", "purchased_at": "2026-01-15", "note": ""},
+  {"asset_id": "ASSET-3004", "category": "扩展坞", "model": "Lenovo Dock Gen2", "status": "in_use", "assignee_id": "EMP-1002", "location": "上海-工位A08", "purchased_at": "2025-11-20", "note": ""},
+  {"asset_id": "ASSET-3005", "category": "扩展坞", "model": "Lenovo Dock Gen2", "status": "repair", "assignee_id": null, "location": "上海-维修中", "purchased_at": "2025-11-20", "note": "网口接触不良"},
+  {"asset_id": "ASSET-3006", "category": "扩展坞", "model": "Lenovo Dock Gen2", "status": "in_use", "assignee_id": "EMP-1003", "location": "上海-工位B03", "purchased_at": "2026-02-10", "note": ""},
+
+  {"asset_id": "ASSET-4001", "category": "手机", "model": "iPhone 15", "status": "in_use", "assignee_id": "EMP-1008", "location": "上海-工位E01", "purchased_at": "2025-09-01", "note": ""},
+  {"asset_id": "ASSET-4002", "category": "手机", "model": "iPhone 15", "status": "in_use", "assignee_id": "EMP-1009", "location": "上海-工位A15", "purchased_at": "2025-09-01", "note": ""},
+  {"asset_id": "ASSET-4003", "category": "手机", "model": "iPhone 15", "status": "in_stock", "assignee_id": null, "location": "上海-IT仓库", "purchased_at": "2025-09-01", "note": ""},
+  {"asset_id": "ASSET-4004", "category": "手机", "model": "Android Pixel 8", "status": "in_stock", "assignee_id": null, "location": "上海-IT仓库", "purchased_at": "2026-04-12", "note": ""},
+  {"asset_id": "ASSET-4005", "category": "手机", "model": "Android Pixel 8", "status": "in_use", "assignee_id": "EMP-1010", "location": "上海-工位F02", "purchased_at": "2026-04-12", "note": "值班手机"},
+  {"asset_id": "ASSET-4006", "category": "手机", "model": "iPhone 15", "status": "in_use", "assignee_id": "EMP-1011", "location": "上海-工位F03", "purchased_at": "2025-09-01", "note": "值班手机"}
+]

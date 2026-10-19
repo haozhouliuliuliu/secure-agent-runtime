@@ -1,0 +1,38 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# ---- 测试 ----
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.ruff_cache/
+
+# ---- 密钥 ----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# ---- 运行时 ----
+data/
+*.db
+*.db-wal
+*.db-shm
+*.log
+logs/
+out/
+
+# ---- 编辑器 ----
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

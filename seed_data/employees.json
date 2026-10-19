@@ -1,0 +1,16 @@
+[
+  {"employee_id": "EMP-1001", "name": "沈知远", "department": "研发中心", "title": "后端工程师", "email": "shen.zhiyuan@example.invalid"},
+  {"employee_id": "EMP-1002", "name": "林清和", "department": "研发中心", "title": "前端工程师", "email": "lin.qinghe@example.invalid"},
+  {"employee_id": "EMP-1003", "name": "赵南星", "department": "产品部", "title": "产品经理", "email": "zhao.nanxing@example.invalid"},
+  {"employee_id": "EMP-1004", "name": "周砚", "department": "财务部", "title": "会计", "email": "zhou.yan@example.invalid"},
+  {"employee_id": "EMP-1005", "name": "许禾", "department": "人力资源部", "title": "招聘专员", "email": "xu.he@example.invalid"},
+  {"employee_id": "EMP-1006", "name": "唐宁", "department": "市场部", "title": "市场经理", "email": "tang.ning@example.invalid"},
+  {"employee_id": "EMP-1007", "name": "高远", "department": "行政部", "title": "行政专员", "email": "gao.yuan@example.invalid"},
+  {"employee_id": "EMP-1008", "name": "苏晚", "department": "客服中心", "title": "客服主管", "email": "su.wan@example.invalid"},
+  {"employee_id": "EMP-1009", "name": "何川", "department": "研发中心", "title": "测试工程师", "email": "he.chuan@example.invalid"},
+  {"employee_id": "EMP-1010", "name": "顾言", "department": "IT 运维", "title": "运维工程师", "email": "gu.yan@example.invalid"},
+  {"employee_id": "EMP-1011", "name": "江雪", "department": "IT 运维", "title": "服务台工程师", "email": "jiang.xue@example.invalid"},
+  {"employee_id": "EMP-1012", "name": "罗一鸣", "department": "研发中心", "title": "算法工程师", "email": "luo.yiming@example.invalid"},
+  {"employee_id": "EMP-1013", "name": "程霜", "department": "财务部", "title": "财务分析", "email": "cheng.shuang@example.invalid"},
+  {"employee_id": "EMP-1014", "name": "叶舟", "department": "市场部", "title": "品牌专员", "email": "ye.zhou@example.invalid"}
+]

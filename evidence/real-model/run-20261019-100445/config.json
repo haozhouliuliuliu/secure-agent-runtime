@@ -1,0 +1,20 @@
+{
+  "run_id": "run-20261019-100445",
+  "started_at": "2026-10-19T10:07:45+00:00",
+  "models": {
+    "planner": "deepseek-flash",
+    "business": "qwen3.8-flash",
+    "policy": "qwen3.8-flash",
+    "auditor": "kimi-k2.7-code"
+  },
+  "max_total_calls": 25,
+  "total_calls": 16,
+  "api_auth_checks": {
+    "no_token": 401,
+    "wrong_token": 401,
+    "executor_admin_api": 403,
+    "missing_task": 404,
+    "cross_user": 404
+  },
+  "cases": 4
+}
