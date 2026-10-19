@@ -29,6 +29,7 @@ dev = [
 ]
 
 [project.scripts]
+secure-agent = "team_agent.cli:main"
 team-agent = "team_agent.cli:main"
 
 [tool.setuptools.packages.find]

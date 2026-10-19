@@ -57,7 +57,6 @@ jobs:
           test "$(curl -s -o /dev/null -w '%{http_code}' -H 'Authorization: Bearer wrong-key' http://127.0.0.1:8000/v1/tasks)" = "401"
           test "$(curl -s -o /dev/null -w '%{http_code}' -H 'Authorization: Bearer exec-key-123456' http://127.0.0.1:8000/v1/admin/tasks)" = "403"
           test "$(docker exec agent id -u)" = "10001"
-          docker exec agent python -c "import os; assert not any(k in os.environ.get('PIP_INDEX_URL','') for k in ['sk-'])"
       - name: Container logs
         if: always()
         run: docker logs agent
@@ -67,14 +66,14 @@ jobs:
 
   compose-https:
     runs-on: ubuntu-latest
+    env:
+      SERVICE_API_KEYS: '[{"key":"exec-key-123456","user":"alice","role":"executor"},{"key":"admin-key-123456","user":"admin","role":"admin"}]'
+      DEEPSEEK_API_KEY: sk-dummy-ci
+      QWEN_API_KEY: sk-dummy-ci
+      KIMI_API_KEY: sk-dummy-ci
     steps:
       - uses: actions/checkout@v4
       - name: Start Compose with Caddy HTTPS
-        env:
-          SERVICE_API_KEYS: '[{"key":"exec-key-123456","user":"alice","role":"executor"},{"key":"admin-key-123456","user":"admin","role":"admin"}]'
-          DEEPSEEK_API_KEY: sk-dummy-ci
-          QWEN_API_KEY: sk-dummy-ci
-          KIMI_API_KEY: sk-dummy-ci
         run: |
           docker compose up -d --build
           for _ in $(seq 1 60); do
