@@ -1,6 +1,6 @@
 # Secure Agent Runtime & Deployment Gateway
 
-> 把项目⑤的多 Agent 联合研判改造成**有边界、可管控、失败不越权**的内部服务。
+> 基于多 Agent 联合研判场景，构建具备身份认证、工具授权、预算控制、审计追踪与安全部署能力的内部服务基线。
 > 全部业务数据虚构；Agent 只读；不执行任何业务写入。
 
 [![CI](https://github.com/haozhouliuliuliu/secure-agent-runtime/actions/workflows/ci.yml/badge.svg)](https://github.com/haozhouliuliuliu/secure-agent-runtime/actions/workflows/ci.yml)
